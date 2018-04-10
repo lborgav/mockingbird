@@ -17,7 +17,10 @@ if (!program.args.length) {
     server.init(json);
   } catch (err) {
     if (err.code === 'MODULE_NOT_FOUND') {
-      console.error('Seems to be that your input file is invalid');
+      console.error(
+        'It seems that your input file is invalid. It should be a valid JSON file',
+      );
+      console.error(err);
     }
   }
 }
