@@ -2,6 +2,7 @@
   "name": "mockingbird",
   "version": "0.1.0",
   "description": "Simple mock server",
+  "preferGlobal": true,
   "main": "server/index.js",
   "bin": {
     "mockingbird": "cli.js"

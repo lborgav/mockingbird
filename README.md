@@ -4,10 +4,11 @@ WORK IN PROGRESS
 
 ### Install
 
-For now, clone this repo and install globally with yarn or npm:
+For now, clone this repo and install the required modules with yarn or npm, and link:
 
 ```sh
-npm install -g
+$ yarn install
+$ yarn link
 ```
 
 Now you have the mockingbird cli
@@ -35,7 +36,7 @@ It is a dictionary with the port you want to follow where the values are diction
 Now execute the following command on terminal:
 
 ```sh
-mockingbird mock.json
+$ mockingbird mock.json
 ```
 
 If we do a GET on localhost:8080/numbers, we have [1, 2, 3, 4, 5] as response
