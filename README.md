@@ -19,10 +19,10 @@ Prepare a json file with the following format:
 ```json
 //mock.json
 {
-  8080: {
+  "8080": {
     "GET /numbers": [1, 2, 3, 4, 5]
   },
-  8081: {
+  "8081": {
     "POST /login": {
       "token": "fkj34rDjhf",
       "logged": true
