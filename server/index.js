@@ -1,11 +1,18 @@
 const http = require('http');
 const url = require('url');
+const fs = require('fs');
 
 let ports;
 let routes = {};
 
-function initListeners(json) {
+function loadFile(file) {
+  const fileText = fs.readFileSync('./' + file, 'utf8');
+  return JSON.parse(fileText);
+}
+
+function initListeners(file) {
   console.log('Firing up Mockingbird server');
+  let json = loadFile(file);
   ports = Object.keys(json);
 
   ports.forEach(function(value) {
