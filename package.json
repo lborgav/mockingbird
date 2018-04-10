@@ -1,0 +1,17 @@
+{
+  "name": "mockingbird",
+  "version": "0.1.0",
+  "description": "Simple mock server",
+  "main": "server/index.js",
+  "bin": {
+    "mockingbird": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Borges Avelino",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.15.1"
+  }
+}
