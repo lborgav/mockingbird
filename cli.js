@@ -12,6 +12,12 @@ if (!program.args.length) {
   program.help();
 } else {
   const file = program.args[0];
-  const json = require('./' + file);
-  server.init(json);
+  try {
+    const json = require('./' + file);
+    server.init(json);
+  } catch (err) {
+    if (err.code === 'MODULE_NOT_FOUND') {
+      console.error('Seems to be that your input file is invalid');
+    }
+  }
 }
