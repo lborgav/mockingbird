@@ -2,6 +2,8 @@
 
 WORK IN PROGRESS
 
+[![Build Status](https://api.travis-ci.org/lborgav/mockingbird.svg?branch=master)](https://api.travis-ci.org/lborgav/mockingbird)
+
 ### Install
 
 For now, clone this repo and install the required modules with yarn or npm, and link:
@@ -40,6 +42,12 @@ $ mockingbird mock.json
 ```
 
 If we do a GET on localhost:8080/numbers, we have [1, 2, 3, 4, 5] as response
+
+### Testing
+
+```sh
+$ yarn test
+```
 
 ### License
 
