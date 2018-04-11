@@ -1,9 +1,12 @@
+'use strict';
+
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
 let ports;
 let routes = {};
+let httpServers = [];
 
 function loadFile(file) {
   const fileText = fs.readFileSync('./' + file, 'utf8');
@@ -19,8 +22,8 @@ function initListeners(file) {
     routes = Object.assign(routes, json[value]);
   });
 
-  ports.map(function(port) {
-    http.createServer(handler).listen(port);
+  httpServers = ports.map(function(port) {
+    return http.createServer(handler).listen(port);
   });
   console.log('Listening on the following ports:', ports.join(', '));
   console.log();
@@ -52,8 +55,19 @@ function handler(req, res) {
   res.end();
 }
 
+function destroy() {
+  try {
+    httpServers.forEach(function(s) {
+      s.close();
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 module.exports = {
   init: function(file) {
     initListeners(file);
   },
+  destroy: destroy,
 };
