@@ -2,7 +2,7 @@
 
 WORK IN PROGRESS
 
-[![Build Status](https://api.travis-ci.org/lborgav/mockingbird.svg?branch=master)](https://api.travis-ci.org/lborgav/mockingbird)
+[![Build Status](https://api.travis-ci.org/lborgav/mockingbird.svg?branch=master)](https://travis-ci.org/lborgav/mockingbird)
 
 ### Install
 
